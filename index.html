@@ -1,55 +1,75 @@
 <!DOCTYPE html>
-<html lang="es  ">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Sebastian De la Paz">
-    <title>Portfolio Sebadlpc</title>
-    <link href="style.css" rel="stylesheet">
-    <style>
-      body {
-        background-color: #5ec5ee;
-      }
-    </style>
+    <title>Sebastian De la Paz - Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos importados de FontAwesome para replicar los de la imagen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <h1>Portfolio de @Sebadlpc</h1>
-  <header>
-    <a href="Mi Portafolio"></a>
+
+    <!-- BARRA DE NAVEGACIÓN FLOTANTE (Estilo Píldora) -->
     <nav class="navbar">
-      <ul class = "nav-links">
-          <a href="#Home">Home</a> 
-          <a href ="#Proyectos">Proyectos</a>
-          <a href ="#Skills">Skills</a>
-      </ul>
+        <div class="nav-container">
+            <a href="#inicio" class="nav-item active">
+                <i class="fa-solid fa-house"></i> Inicio
+            </a>
+            <a href="#acerca" class="nav-item">
+                <i class="fa-regular fa-user"></i> Acerca
+            </a>
+            <a href="#proyectos" class="nav-item">
+                <i class="fa-regular fa-folder"></i> Proyectos
+            </a>
+            <a href="#servicios" class="nav-item">
+                <i class="fa-solid fa-wrench"></i> Servicios
+            </a>
+        </div>
     </nav>
-  </header>
 
-    <div class="contenedor-circulo">
-        <svg width="100" height="100" class="circle"> 
-            <circle
-                cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="violet" />
-        </svg>
-        <img src="Images/img1.png" width="100" height="100" class="Foto de Perfil" >
-    </div>
+    <main class="hero">
+        
+        <!-- Columna Izquierda: Textos y Botones -->
+        <div class="hero-content">
+            <h1>Hola, soy <span>Sebastian</span></h1>
+            
+            <div class="typewriter-box">
+                Data Scientist<span class="cursor">|</span>
+            </div>
+            
+            <p class="description">
+                Soy estudiante de Ciencia de Datos y desarrollador de software. Me apasiona crear, aprender y llevar mis ideas a la realidad a través de la programación y creatividad.
+            </p>
+            
+            <div class="buttons">
+                </a>
+                <a href="mailto:sebadlpc@gmail.com" class="btn btn-outline">
+                    <i class="fa-solid fa-arrow-right"></i> Contactar
+                </a>
+                <a href="#cv" class="btn btn-solid">
+                    <i class="fa-solid fa-download"></i> Descargar CV
+                </a>
+            </div>
+            
+            <div class="social-section">
+                <span class="social-label">SÍGUEME</span>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sebadlpc._/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sebastian-de-la-paz-69235437a/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Sebadlpc"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
 
-    <h2 id="Proyectos">Proyectos realizados</h2>
 
-<aside>
-  <header>
-    <h3>Mis tecnologías favoritas</h3>
-  </header>
-    <ol>
-        <li>Python</li>
-        <li>Java</li>
-        <li>HTML</li>
-        <li>CSS</li>
-    </ol>
-</aside>
+        <div class="hero-image">
+            <div class="image-frame">
+                <img src="images/img1.png" alt="Ilustración">
+            </div>
+        </div>
 
-    <section>   
-        <h2>Sistema de gestión de canchas deportivas</h2>
-    </section>
+    </main>
+
 </body>
 </html>

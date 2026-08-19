@@ -1,3 +1,246 @@
-body{
-    background-color: #f5f5f5;
+/* Importamos fuentes limpias y modernas (Inter para textos, JetBrains Mono para el cuadro de código) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+
+/* CONFIGURACIÓN GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa; /* Fondo casi blanco, no 100% puro para que resalten los cuadros blancos */
+    color: #111;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.nav-container {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    gap: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra súper suave */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #666;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-item i {
+    font-size: 14px;
+}
+
+/* Estilo para el botón activo (Inicio) */
+.nav-item.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Efecto hover en los inactivos */
+.nav-item:not(.active):hover {
+    background: #f0f0f0;
+    color: #111;
+}
+
+/* =========================================
+   SECCIÓN HERO (Inicio)
+   ========================================= */
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 180px 20px 50px 20px; /* Espacio grande arriba para la barra flotante */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide la pantalla en 2 mitades iguales */
+    gap: 60px;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- Textos de la izquierda --- */
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+    color: #4a4a4a; /* Gris oscuro para el nombre, como en la foto */
+}
+
+.typewriter-box {
+    background: #f4f4f5; /* Gris muy clarito */
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #111;
+    border: 1px solid #e4e4e7; /* Borde muy sutil */
+}
+
+.cursor {
+    color: #2563eb; /* Color azul para el cursor de escritura */
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.description {
+    color: #6b7280; /* Gris medio */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 90%;
+}
+
+/* --- Botones --- */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-outline {
+    background: #ffffff;
+    color: #111;
+    border: 1px solid #d1d5db;
+}
+
+.btn-outline:hover {
+    border-color: #111;
+}
+
+.btn-solid {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-solid:hover {
+    transform: translateY(-2px); /* Se levanta un poquito al pasar el mouse */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Redes Sociales --- */
+.social-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #9ca3af;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons a {
+    color: #6b7280;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #111;
+}
+
+/* =========================================
+   LA IMAGEN (Marco blanco con sombra)
+   ========================================= */
+.hero-image {
+    display: flex;
+    justify-content: flex-end; /* Empuja la imagen hacia la derecha */
+}
+
+.image-frame {
+    background: #ffffff;
+    padding: 18px; /* Este padding es lo que crea el "marco" blanco alrededor de la foto */
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08); /* La gran sombra difuminada */
+    width: 100%;
+    max-width: 450px;
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Redondea las esquinas de la foto por dentro del marco */
+    display: block;
+}
+
+/* =========================================
+   ADAPTACIÓN A CELULARES
+   ========================================= */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr; /* Pone los elementos en una sola columna */
+        text-align: center;
+        gap: 50px;
+        padding-top: 130px;
+    }
+    .description {
+        margin: 0 auto 35px auto;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .social-section {
+        align-items: center;
+    }
+    .hero-image {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-item span {
+        display: none; /* Oculta el texto en móviles, deja solo los iconos para que quepa */
+    }
+    .nav-item {
+        padding: 10px 15px;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
 }
