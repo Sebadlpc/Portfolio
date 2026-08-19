@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastian De la Paz - Portafolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Iconos importados de FontAwesome para replicar los de la imagen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN FLOTANTE (Estilo Píldora) -->
+    <!-- BARRA DE NAVEGACIÓN FLOTANTE -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#inicio" class="nav-item active">
@@ -28,22 +27,22 @@
         </div>
     </nav>
 
-    <main class="hero">
+    <main id="inicio" class="hero">
         
         <!-- Columna Izquierda: Textos y Botones -->
         <div class="hero-content">
             <h1>Hola, soy <span>Sebastian</span></h1>
             
             <div class="typewriter-box">
-                Data Scientist<span class="cursor">|</span>
-            </div>
+    <span id="texto-animado"></span><span class="cursor">|</span>
+</div>
             
             <p class="description">
-                Soy estudiante de Ciencia de Datos y desarrollador de software. Me apasiona crear, aprender y llevar mis ideas a la realidad a través de la programación y creatividad.
+                Soy estudiante de Ciencia de Datos y desarrollador de software. 
+                Me apasiona crear, aprender y llevar mis ideas a la realidad a través de la programación y creatividad.
             </p>
             
             <div class="buttons">
-                </a>
                 <a href="mailto:sebadlpc@gmail.com" class="btn btn-outline">
                     <i class="fa-solid fa-arrow-right"></i> Contactar
                 </a>
@@ -70,6 +69,217 @@
         </div>
 
     </main>
+    <!-- SECCIÓN ACERCA DE MÍ -->
+    <section id="acerca" class="about-section">
+        <div class="about-container">
+            
+            <!-- Columna Izquierda: Imagen que se estirará -->
+            <div class="about-image-wrapper">
+                <img src="images/img2.png" alt="img2" class="about-img">
+            </div>
 
+            <!-- Columna Derecha: Información -->
+            <div class="about-content">
+                <h2>Acerca de Mí</h2>
+                
+                <h3 class="about-name">Sebastian De la Paz</h3>
+                <p class="about-text">
+                    Estudiante de educación superior con especialización en Ciencia de Datos. Apasionado por la programación, la arquitectura de software y la creación de sistemas completos.
+                     Me encanta llevar ideas a la realidad construyendo soluciones eficientes y escalables.
+                </p>
+
+                <!-- Bloque Educación -->
+                <div class="resume-block">
+                    <div class="block-header">
+                        <span class="vertical-line"></span>
+                        <h4>Educación</h4>
+                    </div>
+                    <div class="block-body">
+                        <strong>Educación Superior</strong><br>
+                        <span class="muted-text">Especialización en Ciencia de Datos</span><br>
+                        <span class="date-text">Actualmente estudiando</span>
+                    </div>
+                </div>
+
+                <!-- Bloque Experiencia / Proyectos -->
+                <div class="resume-block">
+                    <div class="block-header">
+                        <span class="vertical-line"></span>
+                        <h4>Experiencia y Proyectos</h4>
+                    </div>
+                    <div class="block-body">
+                        <strong>Desarrollador de Software - Independiente</strong><br>
+                        <span class="muted-text">Desarrollo de sistemas de gestión (pagos, inventario, usuarios) y proyectos arquitectónicos como Onlyfields. Trabajo estructurado con microservicios.</span><br>
+                        <span class="date-text">2025 — Actualmente</span>
+                    </div>
+                </div>
+
+                <!-- Bloque Habilidades -->
+                <div class="resume-block">
+                    <div class="block-header">
+                        <span class="vertical-line"></span>
+                        <h4>Habilidades Técnicas</h4>
+                    </div>
+                    <div class="skills-container">
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">Microservicios</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Data Science</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="projects-section">
+        <div class="projects-container">
+            
+            <!-- Título de la sección -->
+            <div class="section-header">
+                <h2>Mis Proyectos</h2>
+                <p>Algunos de los proyectos en los que he trabajado</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Projecto 1 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="images/img3.png" alt="Onlyfields">
+                    </div>
+                    <div class="card-content">
+                        <h3>Onlyfields</h3>
+                        <p>Software de administración para recintos deportivos. 
+                            Incluye módulos de arriendo de canchas, gestión de pagos, inventario y control de usuarios.</p>
+                        
+                        <div class="card-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Microservicios</span>
+                            <span>Backend</span>
+                            <span>MySQL</span>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <a href="https://github.com/Sebadlpc/Onlyfields" class="project-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Proyecto
+                            </a>
+                            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projecto 2 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <span class="status-badge"><i class="fa-solid fa-spinner fa-spin-pulse"></i> En proceso</span>
+                        
+                        <img src="images/img4.webp" alt="Creador de Alineaciones">
+                    </div>
+                    <div class="card-content">
+                        <h3>Lineup Builder</h3>
+                        <p>Sistema interactivo para crear y personalizar alineaciones de fútbol. Permite ajustar formaciones tácticas, posicionar jugadores en el campo visualmente y exportar el resultado.</p>
+                        
+                        <div class="card-tags">
+                            <span>Frontend</span>
+                            <span>Interactividad</span>
+                            <span>Diseño UI</span>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <a href="https://github.com/Sebadlpc/Cloud_Java" class="project-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Proyecto
+                            </a>
+                            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TARJETA 3 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <span class="status-badge"><i class="fa-solid fa-spinner fa-spin-pulse"></i> En proceso</span>
+                        
+                        <img src="images/img5.png" alt="Video Game Stat Tracker">
+                    </div>
+                    <div class="card-content">
+                        <h3>Game Progress Tracker</h3>
+                        <p>Plataforma para el seguimiento de estadísticas y horas de juego. Diseñada para gestionar hojas de ruta de títulos, calculando porcentajes de progreso y métricas de completado para franquicias largas.</p>
+                        
+                        <div class="card-tags">
+                            <span>Data Tracking</span>
+                            <span>Bases de Datos</span>
+                            <span>Estadísticas</span>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <a href="#" class="project-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Proyecto
+                            </a>
+                            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="servicios" class="services-section">
+        <div class="services-container">
+            
+            <!-- Título de la sección -->
+            <div class="section-header">
+                <h2>Mis Servicios</h2>
+                <p>Lo que puedo hacer por ti</p>
+            </div>
+
+            <!-- Contenedor de las Tarjetas (Grid) -->
+            <div class="services-grid">
+                
+                <!-- SERVICIO 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-c"></i>
+                    </div>
+                    <h3>Desarrollo Backend</h3>
+                    <p>Construcción de arquitecturas robustas y microservicios escalables usando Java, enfocadas en el rendimiento y la seguridad del sistema.</p>
+                </div>
+
+                <!-- SERVICIO 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/img6.png" alt="Ciencia de Datos" class="custom-icon">
+                    </div>
+                    <h3>Ciencia de Datos</h3>
+                    <p>Análisis, estructuración y modelado de datos para extraer información valiosa que ayude a la toma de decisiones eficientes.</p>
+                </div>
+
+                <!-- SERVICIO 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3>Gestión de Bases de Datos</h3>
+                    <p>Diseño y administración de bases de datos relacionales (SQL). Creación de esquemas sólidos para el almacenamiento y consulta de información.</p>
+                </div>
+
+            </div>
+
+            <!-- Botón de Contacto Final -->
+            <div class="services-action">
+                <a href="mailto:sebadlpc@gmail.com?subject=Consulta%20desde%20Portafolio" class="btn btn-outline btn-large">
+                    <i class="fa-solid fa-arrow-right"></i> Contrátame
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <script src="app.js"></script>
 </body>
 </html>
